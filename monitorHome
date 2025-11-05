@@ -1,0 +1,13 @@
+// ===== Monitoramento da Home =====
+
+function monitorHome() {
+  for (var i = 0; i < HomeUrls.length; i++) {
+    var url = HomeUrls[i];
+    
+    var mobile = callPageSpeed(url, strategy);
+    addRow('HOME', url, mobile, strategy); 
+    
+    var desktop = callPageSpeed(url, strategy2);
+    addRow('HOME', url, desktop, strategy2); 
+  }
+}
